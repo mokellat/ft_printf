@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 01:33:18 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/26 21:13:47 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/01/27 23:18:24 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_putchar(char c);
-void			ft_putstr_fd(char *s, int fd);
+void			ft_putstr(char *s);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 char			**ft_split(char const *s, char c);
@@ -70,7 +70,7 @@ int				find_zero(const char *ptr);
 int				find_numbers(const char *ptr);
 int				find_precision(const char *ptr, va_list ap);
 int				find_width(const char *ptr, va_list ap);
-void			find_conversion(const char *ptr, va_list ap);
+void			find_conversion(const char *ptr, va_list ap, flagcheck flags);
 flagcheck		ft_printf_flag_check(const char *ptr, va_list ap);
 void			ft_putnbr(int nb);
 void			ft_putchar(char c);
@@ -101,4 +101,5 @@ void			ft_printf_s(const char *ptr, va_list ap);
 void			ft_printf_u(const char *ptr, va_list ap);
 int				t;
 int				back;
+void			ft_print_help_s(char *p, int replace, flagcheck flags, int up);
 #endif

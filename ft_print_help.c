@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 16:16:20 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/26 18:33:24 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/01/27 19:41:40 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void ft_print_help(int p, int replace, flagcheck flags, int up)
     {
         if (flags.width < 0 || (flags.width < 0 && flags.precision < 0) || flags.negative  == 1)
         {
-            if (j != 0)
+            if (j != 0 )
                 ft_putnbr(p);
             while (replace-- > up)
             {
