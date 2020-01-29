@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 14:08:48 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/29 21:50:56 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/01/29 23:54:53 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@ int	ft_printfs(const char *ptr, ...)
 {
 	va_list		ap;
 	int			p;
-
-	p = va_arg(ap, int);
+	flagcheck	flags;
+	
 	va_start(ap, ptr);
 	while (ptr[i])
 	{
 		if(ptr[i] == '%')
 		{
 			i++;
-			ft_printf_s( ptr, ap);
+			ft_printf_c(ptr, ap);
 		}
 		else 
 		{

@@ -6,13 +6,13 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 18:34:53 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/29 23:11:22 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/01/30 00:08:27 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 #define TEST ("%.10d",10)
-#define test1 ("%*s",-10,NULL)
+#define test1 ("%10c",'l')
 int main()
 {
 	int i;
