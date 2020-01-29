@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_width.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/07 22:20:59 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/29 23:09:50 by mokellat         ###   ########.fr       */
+/*   Created: 2019/10/17 21:18:28 by mokellat          #+#    #+#             */
+/*   Updated: 2020/01/29 23:01:48 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int find_width(const char *ptr, va_list ap)
+char	*ft_strdup(const char *src)
 {
-	int j;
-	
-	if (ptr[i] == '*')
+	char	*ptr;
+	int		i;
+
+	i = 0;
+	while (src[i])
+		i++;
+	ptr = (char *)malloc(sizeof(char) * (i + 1));
+	if (!ptr)
+		return (NULL);
+	i = 0;
+	while (src[i])
 	{
-		j = va_arg(ap,int);
-		i += 1;
-		return (j);
+		ptr[i] = src[i];
+		i++;
 	}
-	else
-		return (0);
+	ptr[i] = '\0';
+	return (ptr);
 }

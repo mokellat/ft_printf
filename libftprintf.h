@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 01:33:18 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/27 23:18:24 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/01/29 23:02:34 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,4 +102,5 @@ void			ft_printf_u(const char *ptr, va_list ap);
 int				t;
 int				back;
 void			ft_print_help_s(char *p, int replace, flagcheck flags, int up);
+char			*ft_strdup(const char *src);
 #endif
