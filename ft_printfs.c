@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 14:08:48 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/27 18:54:35 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/01/29 21:50:56 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_printfs(const char *ptr, ...)
 		if(ptr[i] == '%')
 		{
 			i++;
-			ft_printf_s(ptr, ap);
+			ft_printf_s( ptr, ap);
 		}
 		else 
 		{
