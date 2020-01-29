@@ -12,7 +12,7 @@
 
 #include "libftprintf.h"
 #define TEST ("%.10d",10)
-#define test1 ("%10s","ali")
+#define test1 ("%*s",-10,"ali")
 int main()
 {
 	int i;

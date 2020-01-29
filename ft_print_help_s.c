@@ -12,11 +12,20 @@
 
 #include "libftprintf.h"
 
-void    ft_print_help_s(char *p, int replace, flagcheck flags, int up)
+void ft_print_help_s(char *p, int replace, flagcheck flags, int up)
 {
-    if(s == 1)
+    if (s == 1)
     {
-        while(replace-- > up)
+        if (flags.width < 0)
+        {
+            ft_putstr(p);
+            while (replace-- > up)
+            {
+                ft_putchar(' ');
+                back++;
+            }
+        }
+        while (replace-- > up)
         {
             ft_putchar(' ');
             back++;

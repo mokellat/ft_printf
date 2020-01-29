@@ -17,10 +17,12 @@ void ft_printf_s(const char *ptr, va_list ap)
     flagcheck   flags;
     int         j;
     char        *p;
+    int          k;
 
+    k = flags.width;
+    flags = ft_printf_flag_check(ptr, ap);
     p = va_arg(ap, char *);
     j = ft_strlen(p);
-    flags = ft_printf_flag_check(ptr, ap);
     if (flags.numbers > j)
     {
         s = 1;
@@ -29,7 +31,11 @@ void ft_printf_s(const char *ptr, va_list ap)
     else if(flags.width > j)
     {
         s = 1;
-        ft_print_help_s(p, flags.numbers, flags, j);
+        ft_print_help_s(p, flags.width, flags, j);
+    }
+    else if(flags.width < 0)
+    {
+        ft_print_help_s(p, k * -1, flags, j);
     }
     else
         ft_putstr(p);
