@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 01:33:18 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/29 23:23:12 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/01/30 11:18:06 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,4 +103,5 @@ int				t;
 int				back;
 void			ft_print_help_s(char *p, int replace, flagcheck flags, int up);
 char			*ft_strdup(const char *src);
+void			ft_print_help_c(char p, int replace, flagcheck flags, int up);
 #endif
