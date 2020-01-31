@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_numbers_d.c                                     :+:      :+:    :+:   */
+/*   ft_numbers_x.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/14 18:49:53 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/31 14:47:37 by mokellat         ###   ########.fr       */
+/*   Created: 2020/01/31 12:47:45 by mokellat          #+#    #+#             */
+/*   Updated: 2020/01/31 15:01:41 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void ft_num_intern(int p, flagcheck flags, int j)
+void ft_num_intern_x(unsigned int p, flagcheck flags, int j)
 {
     int k;
     
-    (p < 0) ? (k = flags.numbers - flags.precision - 1) : (k = flags.numbers - flags.precision);
-    (p < 0) ? (j--) : j;
-    ft_print_help(p, k, flags, j);
+    (k = flags.numbers - flags.precision);
+    ft_print_help_x(p, k, flags, j);
 }
 
-void ft_numbers_d(va_list ap, flagcheck flags, int p)
+void ft_numbers_x(va_list ap, flagcheck flags, unsigned int p)
 {
     int k;
     int j;
@@ -30,19 +29,18 @@ void ft_numbers_d(va_list ap, flagcheck flags, int p)
     j = (p == 0 && t == 1) ? 0 : j;
     ft_s_check(j, flags);
     if ((flags.numbers > j && flags.precision == 0) || (flags.precision < j))
-        ft_print_help(p, flags.numbers, flags, j);
+        ft_print_help_x(p, flags.numbers, flags, j);
     else if (flags.precision >= flags.numbers)
     {
-        (p < 0) ? (j--) : j;
-        ft_print_help(p, flags.precision, flags, j);
+        ft_print_help_x(p, flags.precision, flags, j);
     }
     else if (flags.numbers > flags.precision && flags.precision > 0)
-        ft_num_intern(p, flags, j);
+        ft_num_intern_x(p, flags, j);
     else if (flags.precision < 0)
     {
         flags.precision *= -1;
-        ft_print_help(p, flags.precision, flags, j);
+        ft_print_help_x(p, flags.precision, flags, j);
     }
     else if (j != 0)
-        ft_putnbr(p);
+        ft_hexa_x(p);
 }

@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 01:33:18 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/30 11:18:06 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:42:43 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,4 +104,11 @@ int				back;
 void			ft_print_help_s(char *p, int replace, flagcheck flags, int up);
 char			*ft_strdup(const char *src);
 void			ft_print_help_c(char p, int replace, flagcheck flags, int up);
+void			ft_hexa_x(unsigned int p);
+void			ft_print_help_x(unsigned int p, int replace, flagcheck flags, int up);
+void			ft_precision_x(va_list ap, flagcheck flags, unsigned int p);
+void			ft_negative_x(va_list ap, flagcheck flags, unsigned int p);
+void			ft_numbers_x(va_list ap, flagcheck flags, unsigned int p);
+void			ft_width_x(va_list ap, flagcheck flags, unsigned int p);
+void			ft_zero_x(va_list ap, flagcheck flags, unsigned int p);
 #endif

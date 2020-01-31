@@ -1,46 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printfs.c                                       :+:      :+:    :+:   */
+/*   ft_precision_x.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/14 14:08:48 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/31 14:34:48 by mokellat         ###   ########.fr       */
+/*   Created: 2020/01/31 12:58:58 by mokellat          #+#    #+#             */
+/*   Updated: 2020/01/31 14:57:51 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	back_to_zero(va_list ap)
+void ft_precision_x(va_list ap, flagcheck flags, unsigned int p)
 {
-	int replace; 
-
-	replace = back;
-	back = 0;
-	return (replace);
-}
-int	ft_printfs(const char *ptr, ...)
-{
-	va_list		ap;
-	int			p;
-	flagcheck	flags;
-	
-	va_start(ap, ptr);
-	while (ptr[i])
-	{
-		if(ptr[i] == '%')
-		{
-			i++;
-			ft_printf_x(ptr, ap);
-		}
-		else 
-		{
-			ft_putchar(ptr[i]);
-			i++;
-			back++;
-		}
-	}
-	va_end(ap);
-	return (back_to_zero(ap));
+    int j;
+    int k;
+    
+    j = ft_strlen(ft_itoa(p));
+    ft_numbers_x(ap, flags, p);
 }

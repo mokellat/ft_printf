@@ -6,13 +6,13 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 18:34:53 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/30 14:01:12 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/01/31 14:53:29 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 #define TEST ("%.10d",10)
-#define test1 ("%*s",-10,NULL)
+#define test1 ("|%10x|",-30)
 int main()
 {
 	int i;
@@ -21,7 +21,7 @@ int main()
 	printf("\n--------------------------------------\n");
 	k = printf test1;
 	printf("\n--------------------------------------\n");
-	printf("%d | %d", i,  k);
+	//printf("%d | %d", i,  k);
 //	printf("\n");
 //ft_printfs("%.10dali",30);
 }
