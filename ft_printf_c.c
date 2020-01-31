@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 23:17:09 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/30 11:27:56 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/01/30 13:58:09 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void ft_printf_c(const char *ptr, va_list ap)
     int k;
 
     flags = ft_printf_flag_check(ptr, ap);
-    p = va_arg(ap, char);
+    p = va_arg(ap, int);
     j = 1;
     k = flags.width;
     if (flags.numbers > j)
