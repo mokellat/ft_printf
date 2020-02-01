@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:52:40 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/31 15:03:00 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/01 15:14:57 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void ft_width_x(va_list ap, flagcheck flags, unsigned int p)
 	int j;
 	int k;
 	
-	j = ft_strlen(ft_itoa(p));
+	j = ft_strlen(ft_itoa_hexa(p));
 	j = (p == 0 && t == 1) ? 0 : j;
 	ft_s_check(j, flags);
 	k = flags.width;

@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:47:45 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/31 15:01:41 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/01 15:50:27 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void ft_numbers_x(va_list ap, flagcheck flags, unsigned int p)
     int k;
     int j;
 
-    j = ft_strlen(ft_itoa(p));
+    j = ft_strlen(ft_itoa_hexa(p));
     j = (p == 0 && t == 1) ? 0 : j;
     ft_s_check(j, flags);
     if ((flags.numbers > j && flags.precision == 0) || (flags.precision < j))
@@ -42,5 +42,5 @@ void ft_numbers_x(va_list ap, flagcheck flags, unsigned int p)
         ft_print_help_x(p, flags.precision, flags, j);
     }
     else if (j != 0)
-        ft_hexa_x(p);
+        ft_hexa_x(p, flags);
 }

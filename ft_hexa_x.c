@@ -6,13 +6,13 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 10:28:42 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/31 14:59:12 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/01 15:55:57 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void ft_hexa_x(unsigned int p)
+void ft_hexa_x(unsigned int p, flagcheck flags)
 {
     unsigned int k;
 
@@ -27,7 +27,10 @@ void ft_hexa_x(unsigned int p)
         if (k >= 10 && k <= 15)
         {
             back++;
-            ft_putchar((k % 10) + 97);
+            if(flags.conversion == 'X')
+                ft_putchar((k % 10) + 65);
+            else
+                ft_putchar((k % 10) + 97);
         }
         if (k >= 16 && k <= 25)
         {
@@ -37,7 +40,7 @@ void ft_hexa_x(unsigned int p)
     }
     else
     {
-        ft_hexa_x(k / 16);
-        ft_hexa_x(k % 16);
+        ft_hexa_x(k / 16, flags);
+        ft_hexa_x(k % 16, flags);
     }
 }
