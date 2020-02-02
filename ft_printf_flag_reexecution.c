@@ -6,19 +6,17 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 14:11:11 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/26 21:09:11 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 21:57:39 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void ft_printf_flag_reexecution(const char *ptr, va_list ap)
+void ft_printf_flag_reexecution(const char *ptr, va_list ap, flagcheck flags)
 {
 	int p;
-	flagcheck flags;
 	int j;
 	
-	flags = ft_printf_flag_check(ptr, ap);
 	p = va_arg(ap, int);
 	j = ft_strlen(ft_itoa(p));
 	j = (p == 0 && t == 1) ? 0 : j;

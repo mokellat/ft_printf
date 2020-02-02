@@ -6,11 +6,11 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 01:21:31 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/29 22:59:28 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 19:02:33 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
 size_t	ft_strlen(const char *str)
 {

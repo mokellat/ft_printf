@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 10:28:42 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/01 15:55:57 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 15:49:47 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void ft_hexa_x(unsigned int p, flagcheck flags)
     k = p;
     if (k < 26)
     {
-        if (k > 0 && k < 10)
+        if (k < 10)
         {
             back++;
             ft_putnbr(k);

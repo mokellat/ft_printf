@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 17:15:03 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/27 23:19:56 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 21:30:00 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ void	ft_putstr(char *s)
 	{
 		while (s[i])
 		{
-			write(1, &s[i], 1);
+			ft_putchar(s[i]);
 			i++;
-			back++;
 		}
 	}
 }

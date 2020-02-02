@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:42:50 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/01 15:50:43 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 16:27:25 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void ft_negative_x(va_list ap, flagcheck flags, unsigned int p)
 {
     int j;
 
-    j = ft_strlen(ft_itoa_hexa(p));
+    j = ft_strlen(ft_itoa_hexa(p, flags));
     j = (p == 0 && t == 1) ? 0 : j;
     if (flags.numbers != 0)
         ft_numbers_x(ap, flags, p);

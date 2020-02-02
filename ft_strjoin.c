@@ -1,46 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printfs.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/14 14:08:48 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/01 15:12:03 by mokellat         ###   ########.fr       */
+/*   Created: 2019/10/18 14:09:35 by mokellat          #+#    #+#             */
+/*   Updated: 2020/02/02 19:02:15 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	back_to_zero(va_list ap)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int replace; 
+	int		i;
+	int		cpt;
+	char	*new;
 
-	replace = back;
-	back = 0;
-	return (replace);
-}
-int	ft_printfs(const char *ptr, ...)
-{
-	va_list		ap;
-	int			p;
-	flagcheck	flags;
-	
-	va_start(ap, ptr);
-	while (ptr[i])
+	i = 0;
+	cpt = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	new = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (!new)
+		return (NULL);
+	while (s1[i])
 	{
-		if(ptr[i] == '%')
-		{
-			i++;
-			ft_printf_x(ptr, ap);
-		}
-		else 
-		{
-			ft_putchar(ptr[i]);
-			i++;
-			back++;
-		}
+		new[cpt++] = s1[i++];
 	}
-	va_end(ap);
-	return (back_to_zero(ap));
+	i = 0;
+	while (s2[i])
+	{
+		new[cpt++] = s2[i++];
+	}
+	new[cpt] = '\0';
+	return (new);
 }

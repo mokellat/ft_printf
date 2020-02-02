@@ -6,20 +6,18 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 23:17:09 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/30 13:58:09 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 21:57:50 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void ft_printf_c(const char *ptr, va_list ap)
+void ft_printf_c(const char *ptr, va_list ap, flagcheck flags)
 {
-    flagcheck flags;
     int j;
     char p;
     int k;
 
-    flags = ft_printf_flag_check(ptr, ap);
     p = va_arg(ap, int);
     j = 1;
     k = flags.width;

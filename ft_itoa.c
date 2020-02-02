@@ -6,11 +6,11 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 11:01:45 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/31 15:42:23 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 19:02:06 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
 static int	ft_intlen(int n)
 {

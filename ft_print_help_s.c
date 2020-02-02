@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 22:59:41 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/29 21:57:36 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 21:28:52 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void ft_print_help_s(char *p, int replace, flagcheck flags, int up)
             while (replace-- > up)
             {
                 ft_putchar(' ');
-                back++;
+                
             }
         }
         else
@@ -32,7 +32,7 @@ void ft_print_help_s(char *p, int replace, flagcheck flags, int up)
             while (replace-- > up)
             {
                 ft_putchar(' ');
-                back++;
+                
             }
             ft_putstr(p);
         }
@@ -43,7 +43,7 @@ void ft_print_help_s(char *p, int replace, flagcheck flags, int up)
         while(k < replace)
         {
             ft_putchar(p[k]);
-            back++;
+            
             k++;
             if(k == ft_strlen(p))
                 break;

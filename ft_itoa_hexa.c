@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 10:19:25 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/01 15:20:12 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 18:40:50 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ unsigned int ft_intlen_hexa(unsigned int n)
     return (i);
 }
 
-void put_tab_hexa(char *ptr, unsigned int n)
+void put_tab_hexa(char *ptr, unsigned int n, flagcheck flags)
 {
     int j;
     long nbr;
@@ -38,8 +38,10 @@ void put_tab_hexa(char *ptr, unsigned int n)
     {
         if(nbr % 16 < 10)
             ptr[j] = nbr % 16 + 48;
-        else
+        else if(flags.conversion == 'X')
             ptr[j] = nbr % 16 + 55;
+        else
+            ptr[j] = nbr % 16 + 87;
         nbr = nbr / 16;
         j++;
     }
@@ -63,23 +65,32 @@ void inverser_tab(char *ptr, unsigned int n)
         j++;
     }
 }
-char      *ft_itoa_hexa(unsigned int n)
+
+char      *ft_itoa_hexa(unsigned int p, flagcheck flags)
 {
     char	*ptr;
 	int		i;
 	int		j;
 	long	nbr;
 
-	nbr = n;
+	nbr = p;
 	j = 0;
 	i = ft_intlen_hexa(nbr);
 	ptr = (char *)malloc((i + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
 	if (nbr == 0)
+    {
 		ptr[0] = '0';
-	put_tab_hexa(ptr, nbr);
-	inverser_tab(ptr, nbr);
-	ptr[i] = '\0';
+        ptr[1] = '\0';
+    }
+    else
+    {  
+	    put_tab_hexa(ptr, nbr, flags);
+	    inverser_tab(ptr, nbr);
+	    ptr[i] = '\0';
+    }
+    if(flags.conversion == 'p')
+        ptr = ft_strjoin("0x", ptr);
 	return (ptr);
 }

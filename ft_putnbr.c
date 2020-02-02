@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 00:18:56 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/26 20:14:12 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 21:42:20 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@ void	ft_putnbr(int nb)
 	if (nb < 0)
 	{
 		ft_putchar('-');
-		back++;
 		n = -1 * nb;
 	}
 	if (n < 10)
 	{
 		ft_putchar(n + '0');
-		back++;
 	}
 	else
 	{

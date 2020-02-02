@@ -6,21 +6,19 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 09:55:57 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/01 15:52:11 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 23:04:33 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void    ft_printf_x(const char *ptr, va_list ap)
+void    ft_printf_x(const char *ptr, va_list ap, flagcheck flags)
 {
     unsigned int    p;
-	flagcheck       flags;
 	int             j;
     
-	flags = ft_printf_flag_check(ptr, ap);
-	p = va_arg(ap, unsigned int);
-	j = ft_strlen(ft_itoa_hexa(p));
+	p = va_arg(ap, unsigned long);
+	j = ft_strlen(ft_itoa_hexa(p , flags));
 	j = (p == 0 && t == 1) ? 0 : j;
 	if(flags.negative == 1)
 		ft_negative_x(ap,flags,p);
@@ -34,5 +32,5 @@ void    ft_printf_x(const char *ptr, va_list ap)
     	ft_precision_x(ap, flags, p);
 	else
 		if(j != 0)
-			ft_hexa_x(p, flags);
+			ft_putstr(ft_itoa_hexa(p, flags));
 }

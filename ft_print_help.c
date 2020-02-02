@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 16:16:20 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/27 19:41:40 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/02 21:28:28 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void ft_print_help(int p, int replace, flagcheck flags, int up)
             while (replace-- > up)
             {
                 ft_putchar(' ');
-                back++;
             }
         }
         else
@@ -36,7 +35,7 @@ void ft_print_help(int p, int replace, flagcheck flags, int up)
             while (replace-- > up)
             {
                 ft_putchar(' ');
-                back++;
+
             }
             if (j != 0)
                 ft_putnbr(p);
@@ -48,7 +47,7 @@ void ft_print_help(int p, int replace, flagcheck flags, int up)
         while (replace-- > up)
         {
             ft_putchar('0');
-            back++;
+            
         }
         if (j != 0)
             (p < 0) ? ft_putnbr(-p) : ft_putnbr(p);
@@ -62,14 +61,14 @@ void ft_print_help(int p, int replace, flagcheck flags, int up)
             while (replace1-- > up)
             {
                 ft_putchar('0');
-                back++;
+               
             }
             if (j != 0)
                 (p < 0) ? ft_putnbr(-p) : ft_putnbr(p);
             while (replace-- > 0)
             {
                 ft_putchar(' ');
-                back++;
+                
             }
         }
         else
@@ -77,13 +76,13 @@ void ft_print_help(int p, int replace, flagcheck flags, int up)
             while (replace-- > 0)
             {
                 ft_putchar(' ');
-                back++;
+                
             }
             ft_p_is_neg(p, &j);
             while (replace1-- > up)
             {
                 ft_putchar('0');
-                back++;
+                
             }
             if (j != 0)
                 (p < 0) ? ft_putnbr(-p) : ft_putnbr(p);
