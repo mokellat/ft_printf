@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_precision_p.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/30 18:34:53 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/11 00:38:44 by mokellat         ###   ########.fr       */
+/*   Created: 2020/02/10 15:35:28 by mokellat          #+#    #+#             */
+/*   Updated: 2020/02/10 15:59:56 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#define TEST ("%.10d",10)
-#include <limits.h>
-#define test1 ("%.s", NULL)
-int main()
+
+void ft_precision_p(va_list ap, flagcheck flags, unsigned long p)
 {
-	int i;
-	int	k;
-	i = ft_printf test1;
-	printf("\n--------------------------------------\n");
-	k = printf test1;
-	printf("\n--------------------------------------\n");
-	printf("%d : mine   |||  %d : original", i, k);
-//	printf("\n");
-//ft_printfs("%.10dali",30);
+    int j;
+    int k;
+    
+    j = ft_strlen(ft_itoa_hexa_p(p, flags));
+    ft_numbers_p(ap, flags, p);
 }

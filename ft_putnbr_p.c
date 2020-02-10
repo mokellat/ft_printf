@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_p.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/30 18:34:53 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/11 00:38:44 by mokellat         ###   ########.fr       */
+/*   Created: 2020/02/10 22:59:21 by mokellat          #+#    #+#             */
+/*   Updated: 2020/02/10 23:01:00 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#define TEST ("%.10d",10)
-#include <limits.h>
-#define test1 ("%.s", NULL)
-int main()
+
+void	ft_putnbr_p(unsigned int nb)
 {
-	int i;
-	int	k;
-	i = ft_printf test1;
-	printf("\n--------------------------------------\n");
-	k = printf test1;
-	printf("\n--------------------------------------\n");
-	printf("%d : mine   |||  %d : original", i, k);
-//	printf("\n");
-//ft_printfs("%.10dali",30);
+	unsigned int n;
+
+	n = nb;
+	if (n < 10)
+	{
+		ft_putchar(n + '0');
+	}
+	else
+	{
+		ft_putnbr_p(n / 10);
+		ft_putnbr_p(n % 10);
+	}
 }

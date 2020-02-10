@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_negative_u.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/30 18:34:53 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/11 00:38:44 by mokellat         ###   ########.fr       */
+/*   Created: 2020/02/10 22:11:08 by mokellat          #+#    #+#             */
+/*   Updated: 2020/02/10 23:02:44 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#define TEST ("%.10d",10)
-#include <limits.h>
-#define test1 ("%.s", NULL)
-int main()
+
+void ft_negative_u(va_list ap, flagcheck flags, unsigned int p)
 {
-	int i;
-	int	k;
-	i = ft_printf test1;
-	printf("\n--------------------------------------\n");
-	k = printf test1;
-	printf("\n--------------------------------------\n");
-	printf("%d : mine   |||  %d : original", i, k);
-//	printf("\n");
-//ft_printfs("%.10dali",30);
+    int j;
+
+    j = ft_strlen(ft_itoa_p(p));
+    j = (p == 0 && t == 1) ? 0 : j;
+    if (flags.numbers != 0)
+        ft_numbers_u(ap, flags, p);
+    else if (flags.width != 0)
+        ft_width_u(ap, flags, p);
+    else if(flags.precision != 0)
+        ft_precision_u(ap, flags, p);
+    else if (j != 0)
+        ft_putnbr_p(p);
 }

@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 01:33:18 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/02 21:56:12 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/10 23:01:21 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,19 @@ char			*ft_strjoin(char const *s1, char const *s2);
 void			ft_putchar(char c);
 void			ft_putstr(char *s);
 int				ft_atoi(const char *str);
+void			ft_negative_p(va_list ap, flagcheck flags, unsigned long p);
+void			ft_zero_p(va_list ap, flagcheck flags, unsigned long p);
+void			ft_numbers_p(va_list ap, flagcheck flags, unsigned long p);
+void			ft_precision_p(va_list ap, flagcheck flags, unsigned long p);
+void			ft_width_p(va_list ap, flagcheck flags, unsigned long p);
+void			ft_print_help_p(unsigned long p, int replace, flagcheck flags, int up);
+char			*ft_itoa_hexa_p(unsigned long p, flagcheck flags);
+void			ft_negative_u(va_list ap, flagcheck flags, unsigned int p);
+void			ft_precision_u(va_list ap, flagcheck flags, unsigned int p);
+void			ft_numbers_u(va_list ap, flagcheck flags, unsigned int p);
+void			ft_width_u(va_list ap, flagcheck flags, unsigned int p);
+void			ft_zero_u(va_list ap, flagcheck flags, unsigned int p);
+void			ft_print_help_u(unsigned int p, int replace, flagcheck flags, int up);
+char			*ft_itoa_p(unsigned int n);
+void			ft_putnbr_p(unsigned int nb);
 #endif
