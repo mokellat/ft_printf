@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 01:33:18 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/10 23:01:21 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/11 18:24:27 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void			ft_printf_x(const char *ptr, va_list ap, flagcheck flags);
 void			ft_printf_X(const char *ptr, va_list ap, flagcheck flags);
 void			ft_printf_s(const char *ptr, va_list ap, flagcheck flags);
 void			ft_printf_u(const char *ptr, va_list ap, flagcheck flags);
+void			ft_printf_per(const char *ptr, va_list ap, flagcheck flags);
 int				t;
 int				back;
 void			ft_print_help_s(char *p, int replace, flagcheck flags, int up);

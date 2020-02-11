@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/08 13:00:36 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/10 22:34:38 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/11 18:26:41 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,6 @@ void	find_conversion(const char *ptr, va_list ap, flagcheck flags)
 		ft_printf_p(ptr, ap, flags);
 	else if (flags.conversion == 'u')
 		ft_printf_u(ptr, ap, flags);
+	else if (flags.conversion == '%')
+		ft_printf_per(ptr, ap, flags);
 }

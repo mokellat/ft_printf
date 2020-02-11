@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 23:17:09 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/02 21:57:50 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/11 18:30:25 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void ft_printf_c(const char *ptr, va_list ap, flagcheck flags)
     }
     else 
     {
-        back++;
         ft_putchar(p);
     }
 }
