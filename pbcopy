@@ -1,0 +1,20 @@
+		if ((flags.width < 0 && flags.precision != 0) || (flags.negative == 1))
+		{
+			(flags.width < 0) ? (flags.width *= -1) : (flags.width);
+			ft_p_is_neg(p, &j);
+			while (replace1-- > up)
+				ft_putchar('0');
+			if (j != 0)
+				ft_putnbr_p(p);
+			while (replace-- > 0)
+				ft_putchar(' ');
+		}
+		else
+		{
+			while (replace-- > 0)
+				ft_putchar(' ');
+			while (replace1-- > up)
+				ft_putchar('0');
+			if (j != 0)
+				ft_putnbr_p(p);
+		}

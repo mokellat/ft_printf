@@ -6,20 +6,20 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 22:20:59 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/29 23:09:50 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/14 22:46:39 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int find_width(const char *ptr, va_list ap)
+int	find_width(const char *ptr, va_list ap)
 {
 	int j;
-	
-	if (ptr[i] == '*')
+
+	if (ptr[g_i] == '*')
 	{
-		j = va_arg(ap,int);
-		i += 1;
+		j = va_arg(ap, int);
+		g_i += 1;
 		return (j);
 	}
 	else

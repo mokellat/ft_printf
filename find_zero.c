@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   find_zero.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mokellat <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 18:31:59 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/09 19:43:15 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/14 22:46:45 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int find_zero(const char *ptr)
+int	find_zero(const char *ptr)
 {
-	if (ptr[i] == '0')
+	if (ptr[g_i] == '0')
 	{
-		while(ptr[i] == '0')
-			i += 1;
+		while (ptr[g_i] == '0')
+			g_i += 1;
 		return (1);
 	}
 	else

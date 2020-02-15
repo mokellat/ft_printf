@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   find_negative.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mokellat <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 15:21:55 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/09 19:42:25 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/14 22:57:30 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	find_negative(const char *ptr)
 {
-	if (ptr[i] == '-')
+	if (ptr[g_i] == '-')
 	{
-		while (ptr[i] == '-')
-			i++;
+		while (ptr[g_i] == '-')
+			g_i++;
 		return (1);
 	}
 	else

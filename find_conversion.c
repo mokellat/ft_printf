@@ -6,16 +6,15 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/08 13:00:36 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/11 18:26:41 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/14 20:41:52 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	find_conversion(const char *ptr, va_list ap, flagcheck flags)
+void	find_conversion(const char *ptr, va_list ap, t_flagcheck flags)
 {
 	flags = ft_printf_flag_check(ptr, ap);
-	
 	if (flags.conversion == 'd')
 		ft_printf_flag_reexecution(ptr, ap, flags);
 	else if (flags.conversion == 's')

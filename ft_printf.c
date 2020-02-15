@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 14:08:48 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/02 21:54:38 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/14 23:01:01 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,31 @@
 
 int	back_to_zero(va_list ap)
 {
-	int replace; 
+	int replace;
 
-	replace = back;
-	back = 0;
+	replace = g_back;
+	g_back = 0;
 	return (replace);
 }
+
 int	ft_printf(const char *ptr, ...)
 {
 	va_list		ap;
 	int			p;
-	flagcheck	flags;
-	
+	t_flagcheck	flags;
+
 	va_start(ap, ptr);
-	while (ptr[i])
+	while (ptr[g_i])
 	{
-		if(ptr[i] == '%')
+		if (ptr[g_i] == '%')
 		{
-			i++;
+			g_i++;
 			find_conversion(ptr, ap, flags);
 		}
-		else 
+		else
 		{
-			ft_putchar(ptr[i]);
-			i++;
+			ft_putchar(ptr[g_i]);
+			g_i++;
 		}
 	}
 	va_end(ap);

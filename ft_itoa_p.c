@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 22:45:18 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/10 22:58:34 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/14 01:40:53 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_intlen_p(unsigned int n)
 {
-	int		i;
+	int				i;
 	unsigned int	nbr;
 
 	nbr = n;
@@ -29,7 +29,7 @@ static int	ft_intlen_p(unsigned int n)
 
 void		put_tab_p(char *ptr, int n)
 {
-	int		j;
+	int				j;
 	unsigned int	nbr;
 
 	nbr = n;
@@ -44,10 +44,10 @@ void		put_tab_p(char *ptr, int n)
 
 void		inverser_tab_pos_p(char *ptr, unsigned int n)
 {
-	int		j;
-	int		i;
-	char	c;
-	unsigned int 	nbr;
+	int				j;
+	int				i;
+	char			c;
+	unsigned int	nbr;
 
 	nbr = n;
 	i = ft_intlen_p(nbr);
@@ -66,10 +66,10 @@ void		inverser_tab_pos_p(char *ptr, unsigned int n)
 
 char		*ft_itoa_p(unsigned int n)
 {
-	char	*ptr;
-	int		i;
-	int		j;
-	unsigned int nbr;
+	char			*ptr;
+	int				i;
+	int				j;
+	unsigned int	nbr;
 
 	nbr = n;
 	j = 0;
@@ -78,9 +78,15 @@ char		*ft_itoa_p(unsigned int n)
 	if (!ptr)
 		return (NULL);
 	if (nbr == 0)
+	{
 		ptr[0] = '0';
-	put_tab_p(ptr, nbr);
-	inverser_tab_pos_p(ptr, nbr);
-	ptr[i] = '\0';
+		ptr[1] = '\0';
+	}
+	else
+	{
+		put_tab_p(ptr, nbr);
+		inverser_tab_pos_p(ptr, nbr);
+		ptr[i] = '\0';
+	}
 	return (ptr);
 }

@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   find_numbers.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mokellat <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 21:14:15 by mokellat          #+#    #+#             */
-/*   Updated: 2020/01/09 19:42:02 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/14 22:57:47 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int find_numbers(const char *ptr)
+int	find_numbers(const char *ptr)
 {
 	char	*str;
 	int		j;
 
 	j = 0;
-	if (ptr[i] >= '0' && ptr[i] <= '9')
+	if (ptr[g_i] >= '0' && ptr[g_i] <= '9')
 	{
-		j = i;
-		while(ptr[i] >= '0' && ptr[i] <= '9')
-			i += 1;	
+		j = g_i;
+		while (ptr[g_i] >= '0' && ptr[g_i] <= '9')
+			g_i += 1;
 		return (ft_atoi(ptr + j));
 	}
 	else
