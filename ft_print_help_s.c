@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 22:59:41 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/15 01:00:49 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/15 09:13:02 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_k_is_there(t_flagcheck flags, char *p, int k)
 	{
 		ft_putchar(p[k]);
 		k++;
-		if (k == ft_strlen(p))
+		if ((size_t)k == ft_strlen(p))
 			break ;
 	}
 }
@@ -43,7 +43,7 @@ void	ft_condition_three(t_flagcheck flags, int replace, int up, char *p)
 		{
 			ft_putchar(p[k]);
 			k++;
-			if (k == ft_strlen(p))
+			if ((size_t)k == ft_strlen(p))
 				break ;
 		}
 	}
@@ -69,8 +69,7 @@ void	ft_g_s(t_flagcheck flags, int replace, int up, char *p)
 
 void	ft_print_help_s(char *p, int replace, t_flagcheck flags, int up)
 {
-	int k;
-	int l;
+	int	k;
 
 	if (g_s == 1)
 		ft_g_s(flags, replace, up, p);
@@ -81,7 +80,7 @@ void	ft_print_help_s(char *p, int replace, t_flagcheck flags, int up)
 		{
 			ft_putchar(p[k]);
 			k++;
-			if (k == ft_strlen(p))
+			if ((size_t)k == ft_strlen(p))
 				break ;
 		}
 	}

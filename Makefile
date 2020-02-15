@@ -2,6 +2,7 @@ CC = gcc
 AR = ar
 NAME = libftprintf.a
 LIB = libftprintf.a
+flags = -Wall -Werror -Wextra
 FILES = *.c
 
 all: $(NAME)

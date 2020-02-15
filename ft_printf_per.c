@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/14 07:27:21 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/14 22:52:04 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/15 08:39:29 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	ft_print_help_per(int replace, t_flagcheck flags)
 	}
 }
 
-void	ft_printf_per(const char *ptr, va_list ap, t_flagcheck flags)
+void	ft_printf_per(t_flagcheck flags)
 {
 	int k;
 

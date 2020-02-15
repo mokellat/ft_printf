@@ -6,13 +6,13 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 14:08:48 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/14 23:01:01 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/15 09:40:25 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	back_to_zero(va_list ap)
+int	back_to_zero(void)
 {
 	int replace;
 
@@ -24,8 +24,6 @@ int	back_to_zero(va_list ap)
 int	ft_printf(const char *ptr, ...)
 {
 	va_list		ap;
-	int			p;
-	t_flagcheck	flags;
 
 	va_start(ap, ptr);
 	while (ptr[g_i])
@@ -33,7 +31,7 @@ int	ft_printf(const char *ptr, ...)
 		if (ptr[g_i] == '%')
 		{
 			g_i++;
-			find_conversion(ptr, ap, flags);
+			find_conversion(ptr, ap);
 		}
 		else
 		{
@@ -42,5 +40,5 @@ int	ft_printf(const char *ptr, ...)
 		}
 	}
 	va_end(ap);
-	return (back_to_zero(ap));
+	return (back_to_zero());
 }

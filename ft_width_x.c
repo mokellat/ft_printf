@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:52:40 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/15 07:20:35 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/15 08:41:50 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_extra(t_flagcheck flags, unsigned int p, int k, int j)
 	}
 }
 
-void	ft_width_x(va_list ap, t_flagcheck flags, unsigned int p)
+void	ft_width_x(t_flagcheck flags, unsigned int p)
 {
 	int j;
 	int k;

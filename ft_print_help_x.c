@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 11:35:07 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/15 01:39:22 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/15 09:07:09 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	ft_three(t_flagcheck flags, int replace, int up, unsigned int p)
 	int	j;
 
 	replace1 = flags.precision;
+	j = ft_strlen(ft_itoa_hexa(p, flags));
 	j = (p == 0 && g_t == 1) ? 0 : j;
 	if ((flags.width < 0 && flags.precision != 0) || (flags.negative == 1))
 	{
@@ -44,6 +45,7 @@ void	ft_one(t_flagcheck flags, int replace, int up, unsigned int p)
 {
 	int j;
 
+	j = ft_strlen(ft_itoa_hexa(p, flags));
 	j = (p == 0 && g_t == 1) ? 0 : j;
 	if (flags.width < 0 || (flags.width < 0 && flags.precision < 0)
 			|| flags.negative == 1)

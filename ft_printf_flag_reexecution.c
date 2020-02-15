@@ -6,14 +6,13 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 14:11:11 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/14 23:10:27 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/15 09:41:10 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_printf_flag_reexecution(const char *ptr, va_list ap,
-t_flagcheck flags)
+void	ft_printf_flag_reexecution(va_list ap, t_flagcheck flags)
 {
 	int p;
 	int j;
@@ -24,15 +23,15 @@ t_flagcheck flags)
 	if (p < 0)
 		j--;
 	if (flags.negative == 1)
-		ft_negative_d(ap, flags, p);
+		ft_negative_d(flags, p);
 	else if (flags.zero == 1)
-		ft_zero_d(ap, flags, p);
+		ft_zero_d(flags, p);
 	else if (flags.numbers > j)
-		ft_numbers_d(ap, flags, p);
+		ft_numbers_d(flags, p);
 	else if (flags.width != 0)
-		ft_width_d(ap, flags, p);
+		ft_width_d(flags, p);
 	else if (flags.precision > j)
-		ft_precision_d(ap, flags, p);
+		ft_precision_d(flags, p);
 	else
 	{
 		if (j != 0)

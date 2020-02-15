@@ -6,13 +6,13 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 09:55:57 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/14 22:53:14 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/15 09:25:32 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_printf_x(const char *ptr, va_list ap, t_flagcheck flags)
+void	ft_printf_x(va_list ap, t_flagcheck flags)
 {
 	unsigned int	p;
 	int				j;
@@ -21,15 +21,15 @@ void	ft_printf_x(const char *ptr, va_list ap, t_flagcheck flags)
 	j = ft_strlen(ft_itoa_hexa(p, flags));
 	j = (p == 0 && g_t == 1) ? 0 : j;
 	if (flags.negative == 1)
-		ft_negative_x(ap, flags, p);
+		ft_negative_x(flags, p);
 	else if (flags.zero == 1)
-		ft_zero_x(ap, flags, p);
+		ft_zero_x(flags, p);
 	else if (flags.numbers > j)
-		ft_numbers_x(ap, flags, p);
+		ft_numbers_x(flags, p);
 	else if (flags.width != 0)
-		ft_width_x(ap, flags, p);
+		ft_width_x(flags, p);
 	else if (flags.precision > j)
-		ft_precision_x(ap, flags, p);
+		ft_precision_x(flags, p);
 	else
 	{
 		if (j != 0)

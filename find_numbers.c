@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 21:14:15 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/14 22:57:47 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/15 08:24:27 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	find_numbers(const char *ptr)
 {
-	char	*str;
 	int		j;
 
 	j = 0;

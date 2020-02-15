@@ -6,13 +6,13 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 23:17:09 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/14 23:01:41 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/15 08:37:18 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_printf_c(const char *ptr, va_list ap, t_flagcheck flags)
+void	ft_printf_c(va_list ap, t_flagcheck flags)
 {
 	int		j;
 	char	p;

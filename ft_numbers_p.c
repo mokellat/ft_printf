@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 15:04:54 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/14 21:01:26 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/15 08:54:40 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ void	ft_num_intern_p(unsigned long p, t_flagcheck flags, int j)
 	ft_print_help_p(p, k, flags, j);
 }
 
-void	ft_numbers_p(va_list ap, t_flagcheck flags, unsigned long p)
+void	ft_numbers_p(t_flagcheck flags, unsigned long p)
 {
-	int k;
 	int j;
 
 	j = ft_strlen(ft_itoa_hexa_p(p, flags));
