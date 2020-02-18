@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 14:08:48 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/15 09:40:25 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/18 13:23:17 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	ft_printf(const char *ptr, ...)
 {
 	va_list		ap;
 
+	g_i = 0;
 	va_start(ap, ptr);
 	while (ptr[g_i])
 	{

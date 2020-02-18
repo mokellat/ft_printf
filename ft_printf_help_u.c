@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 22:23:52 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/15 04:07:00 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/18 13:04:32 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_un(t_flagcheck flags, unsigned int p, int replace, int j)
 	if ((flags.width < 0 && flags.precision != 0) || (flags.negative == 1))
 	{
 		(flags.width < 0) ? (flags.width *= -1) : (flags.width);
-		ft_p_is_neg(p, &j);
 		while (replace1-- > j)
 			ft_putchar('0');
 		if (j != 0)
@@ -68,7 +67,7 @@ void	ft_print_help_u(unsigned int p, int replace, t_flagcheck flags, int up)
 	int replace1;
 
 	replace1 = flags.precision;
-	j = ft_strlen(ft_itoa(p));
+	j = ft_strlen(ft_itoa_p(p));
 	j = (p == 0 && g_t == 1) ? 0 : j;
 	if (g_s == 1)
 		ft_deux(flags, p, replace, up);

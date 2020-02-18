@@ -6,11 +6,30 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:52:40 by mokellat          #+#    #+#             */
-/*   Updated: 2020/02/15 08:41:50 by mokellat         ###   ########.fr       */
+/*   Updated: 2020/02/18 14:11:00 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+void	ft_extra_final_x(t_flagcheck flags, unsigned int p, int k, int j)
+{
+	if (flags.width < 0 && flags.width * -1 > flags.precision)
+	{
+		(k = (flags.width * -1) - flags.precision);
+		ft_print_help_x(p, k, flags, j);
+	}
+	else if (flags.width < 0 && flags.precision > 0)
+	{
+		g_s = 2;
+		ft_print_help_x(p, flags.precision, flags, j);
+	}
+	else
+	{
+		if (j != 0)
+			ft_putstr(ft_itoa_hexa(p, flags));
+	}
+}
 
 void	ft_extra(t_flagcheck flags, unsigned int p, int k, int j)
 {
@@ -24,6 +43,8 @@ void	ft_extra(t_flagcheck flags, unsigned int p, int k, int j)
 		k = flags.width * -1;
 		ft_print_help_x(p, k, flags, j);
 	}
+	else
+		ft_extra_final_x(flags, p, k, j);
 }
 
 void	ft_width_x(t_flagcheck flags, unsigned int p)
@@ -40,7 +61,8 @@ void	ft_width_x(t_flagcheck flags, unsigned int p)
 		(k < 0) ? (k *= -1) : k;
 		ft_print_help_x(p, k, flags, j);
 	}
-	else if ((flags.precision >= flags.width && flags.precision > 0))
+	else if ((flags.precision >= flags.width && flags.precision > 0 &&
+				flags.width > 0))
 		ft_print_help_x(p, flags.precision, flags, j);
 	else if (flags.precision < flags.width && flags.precision > 0)
 	{
